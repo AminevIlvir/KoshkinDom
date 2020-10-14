@@ -1,0 +1,56 @@
+﻿<Page x:Class="Game.Gam"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Game"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      MinHeight="450" MinWidth="800"
+      MaxWidth="1366" MaxHeight="760"
+      Title="Gam">
+
+    <Grid x:Name="Gr">
+        <StackPanel HorizontalAlignment="Right">
+            <Button x:Name="time" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="time.gif"/>
+            </Button>
+            <Label Height="50" Name="ltime" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Button x:Name="shet" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="shet.gif"/>
+            </Button>
+            <Label Height="50" Name="lpoint" HorizontalAlignment="Center" Visibility="Hidden"/>
+            <Button x:Name="record" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="record1.gif"/>
+            </Button>
+            <Label Name="lrecord" Height="50" HorizontalAlignment="Center" Visibility="Hidden"/>
+        </StackPanel>
+        <Button Click="Button_Click" x:Name="Start" Width="230" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Image Source="start.gif"/>
+        </Button>
+        <Grid Margin="20,20,250,100">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="White" Opacity="0.3" Grid.ColumnSpan="3" Grid.RowSpan="2"></Rectangle>
+            <Image x:Name="Image" MouseDown="Image_MouseDown" Grid.Row="0" Grid.Column="0" Opacity="1"></Image>
+            <Image x:Name="Image1" MouseDown="Image1_MouseDown" Grid.Row="0" Grid.Column="1"></Image>
+            <Image x:Name="Image2" MouseDown="Image2_MouseDown" Grid.Row="0" Grid.Column="2"></Image>
+            <Image x:Name="Image3" MouseDown="Image3_MouseDown" Grid.Row="1" Grid.Column="0"></Image>
+            <Image x:Name="Image4" MouseDown="Image4_MouseDown" Grid.Row="1" Grid.Column="1"></Image>
+            <Image x:Name="Image5" MouseDown="Image5_MouseDown" Grid.Row="1" Grid.Column="2"></Image>
+            <Image x:Name="MessageImage" Grid.RowSpan="2" Grid.ColumnSpan="3" Width="500" Height="100"></Image>
+        </Grid>
+        <Button x:Name="Back" Width="230" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="Back_Click">
+            <Image Source="back.gif"/>
+        </Button>
+        <Image Margin="393,0,407,0" HorizontalAlignment="Center" Height="60" VerticalAlignment="Bottom"/>
+        <Label Name="l7" Visibility="Hidden"></Label>
+    </Grid>
+</Page>
