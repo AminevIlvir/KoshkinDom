@@ -5,7 +5,7 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace Books
+namespace Game
 {
 	/// <summary>
 	/// Description of BDClass.
