@@ -45,6 +45,7 @@ namespace Game
             player.Open(new Uri(FilePath.Combine(directory, "music.wav")));
             if (Media.music == true)
             {
+                
                 player.Play();
                 Media.music = false;
             }

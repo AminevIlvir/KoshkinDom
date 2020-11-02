@@ -57,7 +57,7 @@ namespace Game
         {
             Korobki();
         }
-        async void timerTick2(object sender, EventArgs e)
+        private void timerTick2(object sender, EventArgs e)
         {
             ltime.Content = 20 - sekunda2;
             if (sekunda2 < 20)
@@ -67,6 +67,7 @@ namespace Game
             else
             {
                 timer2.Stop();
+                Error();
                 //vsegoockov -= ocki;
                 //opisanie.Text = "Время окончено.Cложность будет понижена на уровень. \nВаше количество очков за уровень: " + ocki;
                 sekunda2 = 0;
@@ -77,12 +78,8 @@ namespace Game
             }
             if (kolichestvoprav == sloshost)
             {
-                timer2.Stop(); 
-
-                timer.Stop();
+                timer2.Stop();
                 dostup = false;
-                await Task.Delay(1000);
-
                 Image.Visibility = Visibility.Hidden;
                 Image1.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Hidden;
@@ -90,19 +87,19 @@ namespace Game
                 Image4.Visibility = Visibility.Hidden;
                 Image5.Visibility = Visibility.Hidden;
                 MessageImage.Visibility = Visibility.Visible;
-
                 MessageImage.Source = new BitmapImage(new Uri(@"Images\Sloshnost.png", UriKind.Relative));
                 vsegoockov++;
-
+                timer.Stop();
                 lpoint.Content = vsegoockov.ToString();
                 sloshost++;
                 sekunda2 = 0;
-                pologhenievmassive = 0;
                 l7.Content = "";
                 i = 0;
                 kolicestvokorobok = 0;
                 kolichestvoclikovnakorobki = 0;
                 kolichestvoprav = 0;
+                RoutedEventArgs e1 = new RoutedEventArgs();
+                Button_Click(sender, e1);
                 Korobki();
             }
         }
@@ -151,7 +148,7 @@ namespace Game
             }
             i++;
         }
-        public void Error(object sender, MouseButtonEventArgs e)
+        public void Error()
         {
 
             pologhenievmassive = 0;
@@ -196,12 +193,11 @@ namespace Game
                 }
                 else
                 {
-                    Error(sender,e);
+                    Error();
                 }
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender,e);
-                    Button_Click(sender,e);
                 }
             }
         }
@@ -223,12 +219,12 @@ namespace Game
                 }
                 else
                 {
-                    Error(sender, e);
+                    Error();
                 }
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    Button_Click(sender, e);
+                    //Button_Click(sender, e);
                 }
             }
         }
@@ -250,12 +246,12 @@ namespace Game
                 }
                 else
                 {
-                    Error(sender, e);
+                    Error();
                 }
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    Button_Click(sender, e);
+                    //Button_Click(sender, e);
                 }
             }
         }
@@ -278,12 +274,12 @@ namespace Game
                 }
                 else
                 {
-                    Error(sender, e);
+                    Error();
                 }
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    Button_Click(sender, e);
+                    //Button_Click(sender, e);
                 }
             }
         }
@@ -307,12 +303,12 @@ namespace Game
                 }
                 else
                 {
-                    Error(sender, e);
+                    Error();
                 }
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    Button_Click(sender, e);
+                    //Button_Click(sender, e);
                 }
             }
         }
@@ -334,12 +330,12 @@ namespace Game
                 }
                 else
                 {
-                    Error(sender, e);
+                    Error();
                 }
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    Button_Click(sender, e);
+                    //Button_Click(sender, e);
                 }
             }
         }
