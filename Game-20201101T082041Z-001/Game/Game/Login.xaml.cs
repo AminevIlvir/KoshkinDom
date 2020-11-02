@@ -43,7 +43,7 @@ namespace Game
             string cmd1 = "Select id,login,parol,record from main where login=@login and parol=@parol";
             cmd.CommandText = cmd1;
             cmd.Parameters.AddWithValue("@login",LoginLabel.Text);
-            cmd.Parameters.AddWithValue("@parol",ParolLabel.Text);
+            cmd.Parameters.AddWithValue("@parol",ParolLabel.Password);
             SQLiteDataReader sdr= cmd.ExecuteReader();
             if (sdr.HasRows)
             {
