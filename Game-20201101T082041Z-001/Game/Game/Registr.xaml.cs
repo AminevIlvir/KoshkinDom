@@ -81,42 +81,41 @@ namespace Game
                 {
                     conn.Close();
 
-                    string cmd1 = "Insert Into Main (login,name,parol,record) values (@Login,@Name,@Parol,@Record)";
+                    if (Parol.Text.Length != 0 & Name.Text.Length != 0)
+                    {
+                        string cmd1 = "Insert Into Main (login,name,parol,record) values (@Login,@Name,@Parol,@Record)";
 
-                    SQLiteCommand command = conn.CreateCommand();
-                    command.CommandText = cmd1;
-                    command.Parameters.AddWithValue("@Login", Login.Text);
-                    command.Parameters.AddWithValue("@Name", Name.Text);
-                    command.Parameters.AddWithValue("@Parol", Parol.Text);
-                    command.Parameters.AddWithValue("@Record", 0);
-                    try
-                    {
-                        //If there are no errors.
-                        conn.Open();
-                        command.ExecuteNonQuery();
-                        conn.Close();
-                        MessageBox.Show("Вы зарегестрировались");
-                        Manager.Mainscreen.GoBack();
+                        SQLiteCommand command = conn.CreateCommand();
+                        command.CommandText = cmd1;
+                        command.Parameters.AddWithValue("@Login", Login.Text);
+                        command.Parameters.AddWithValue("@Name", Name.Text);
+                        command.Parameters.AddWithValue("@Parol", Parol.Text);
+                        command.Parameters.AddWithValue("@Record", 0);
+                        try
+                        {
+                            conn.Open();
+                            command.ExecuteNonQuery();
+                            conn.Close();
+                            MessageBox.Show("Вы зарегистрировались");
+                            Manager.Mainscreen.GoBack();
+                        }
+                        catch (Exception ex)
+                        {
+                            //If something went wrong
+                            MessageBox.Show("Ошибка" + ex);
+                        }
                     }
-                    catch (Exception ex)
-                    {
-                        //If something went wrong
-                        MessageBox.Show("Ошибка" + ex);
-                    }
+                    else MessageBox.Show("Введите все поля");
                 }
                 else { MessageBox.Show("Логин занят"); }
             }
             catch(Exception ex) 
             { MessageBox.Show("Ошибка" + ex); }
-            /*ApplicationContext db = new ApplicationContext();
-            MainBD NewUser=new MainBD();
-            NewUser.Login = Login.Text;
-            NewUser.Name = Name.Text;
-            NewUser.Parol = Parol.Text;
-            NewUser.Record = 0;
-            db.MainBDs.Load();
-            db.MainBDs.Add(NewUser);
-            db.SaveChanges();*/
+            try
+            {
+                conn.Close();
+            }
+            catch { }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -136,6 +135,14 @@ namespace Game
             else
             {
                 player.Stop();
+            }
+        }
+
+        private void Parol_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = false;
             }
         }
     }

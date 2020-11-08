@@ -28,15 +28,32 @@ namespace Game
         {
             InitializeComponent();
             player = p1;
+            if (Media.music == false)
+            {
+                mus.Source = new BitmapImage(new Uri(@"Images\musicвыбран.png", UriKind.Relative));
+            }
+            else
+            {
+                mus.Source = new BitmapImage(new Uri(@"Images\music.png", UriKind.Relative));
+            }
+            if (Media.sound == false)
+            {
+                zvu.Source = new BitmapImage(new Uri(@"Images\zvukвыбрано.png", UriKind.Relative));
+            }
+            else
+            {
+                zvu.Source = new BitmapImage(new Uri(@"Images\zvuk.png", UriKind.Relative));
+            }
         }
         public void MediaSound()
         {
             var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var player = new SoundPlayer(FilePath.Combine(directory, "click.wav"));
+            var player1 = new SoundPlayer(FilePath.Combine(directory, "click.wav"));
             if (Media.sound == false)
             {
-                player.Play();
+                player1.Play();
             }
+
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -48,6 +65,48 @@ namespace Game
         {
             MediaSound();
             Manager.Mainscreen.Navigate(new Registr());
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void mus_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            MediaSound();
+            var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+
+            if (Media.music == true)
+            {
+                player.Play();
+                Media.music = false;
+                mus.Source = new BitmapImage(new Uri(@"Images\musicвыбран.png", UriKind.Relative));
+            }
+            else
+            {
+                player.Stop();
+                Media.music = true;
+                mus.Source = new BitmapImage(new Uri(@"Images\music.png", UriKind.Relative));
+            }
+        }
+
+        private void zvu_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var player1 = new SoundPlayer(FilePath.Combine(directory, "click.wav"));
+            if (Media.sound == true)
+            {
+                player1.Play();
+                Media.sound = false;
+                zvu.Source = new BitmapImage(new Uri(@"Images\zvukвыбрано.png", UriKind.Relative));
+            }
+            else
+            {
+                player1.Stop();
+                Media.sound = true;
+                zvu.Source = new BitmapImage(new Uri(@"Images\zvuk.png", UriKind.Relative));
+            }
         }
     }
 }

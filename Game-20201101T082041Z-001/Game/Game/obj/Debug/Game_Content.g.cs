@@ -9,5 +9,6 @@
 //------------------------------------------------------------------------------
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("click.wav")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("music.wav")]
 
 

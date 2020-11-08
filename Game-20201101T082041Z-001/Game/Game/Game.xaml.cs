@@ -68,26 +68,20 @@ namespace Game
             {
                 timer2.Stop();
                 Error();
-                //vsegoockov -= ocki;
-                //opisanie.Text = "Время окончено.Cложность будет понижена на уровень. \nВаше количество очков за уровень: " + ocki;
                 sekunda2 = 0;
-                //lpoint.Content = "Всего очков: " + vsegoockov.ToString();
-                //if (sloshost > 3)
-                   // sloshost--;
-                //oc2.Content = "Очки за раунд: " + ocki;
             }
             if (kolichestvoprav == sloshost)
             {
                 timer2.Stop();
                 dostup = false;
-                Image.Visibility = Visibility.Hidden;
+                /*Image.Visibility = Visibility.Hidden;
                 Image1.Visibility = Visibility.Hidden;
                 Image2.Visibility = Visibility.Hidden;
                 Image3.Visibility = Visibility.Hidden;
                 Image4.Visibility = Visibility.Hidden;
                 Image5.Visibility = Visibility.Hidden;
                 MessageImage.Visibility = Visibility.Visible;
-                MessageImage.Source = new BitmapImage(new Uri(@"Images\Sloshnost.png", UriKind.Relative));
+                MessageImage.Source = new BitmapImage(new Uri(@"Images\Sloshnost.png", UriKind.Relative));*/
                 vsegoockov++;
                 timer.Stop();
                 lpoint.Content = vsegoockov.ToString();
@@ -98,8 +92,9 @@ namespace Game
                 kolicestvokorobok = 0;
                 kolichestvoclikovnakorobki = 0;
                 kolichestvoprav = 0;
-                RoutedEventArgs e1 = new RoutedEventArgs();
-                Button_Click(sender, e1);
+                //RoutedEventArgs e1 = new RoutedEventArgs();
+                Prodol();
+
                 Korobki();
             }
         }
@@ -142,21 +137,20 @@ namespace Game
                 await Task.Delay(1000);
                 dostup = true;
                 IgrovMessageImage.Source=new BitmapImage(new Uri(@"Images\Vashhod.png",UriKind.Relative));
-                timer2.Start();
                 Korobki();
                 timer.Stop();
+                timer2.Start();
             }
             i++;
         }
         public void Error()
         {
-
+            ltime.Content = 0;
             pologhenievmassive = 0;
             sekunda2 = 0;
             sloshost = 3;
             l7.Content = "";
             dostup = false;
-            //MessageBox.Show("Вы проиграли");
             timer2.Stop();
             timer.Stop();
             RecordCheck();
@@ -170,7 +164,6 @@ namespace Game
             MessageImage.Visibility = Visibility.Visible;
             var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             MessageImage.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("Theend.png"))));
-            //Button_Click(sender, e);
         }
         bool dostup;
         int kolichestvoclikovnakorobki, kolicestvokorobok, pologhenievmassive;
@@ -189,7 +182,6 @@ namespace Game
 
                 if (a[pologhenievmassive] == "1")
                 {pologhenievmassive++; kolichestvoprav++; await Task.Delay(1000);
-                    //lpoint.Content = "Всего очков: " + vsegoockov.ToString();/*oc2.Content = "Очки за раунд: " + ocki; */
                 }
                 else
                 {
@@ -215,7 +207,6 @@ namespace Game
                 if (a[pologhenievmassive] == "2")
                 {
                     pologhenievmassive++; kolichestvoprav++; await Task.Delay(1000);
-                    //lpoint.Content = "Всего очков: " + vsegoockov.ToString();/*oc2.Content = "Очки за раунд: " + ocki;*/
                 }
                 else
                 {
@@ -224,7 +215,6 @@ namespace Game
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    //Button_Click(sender, e);
                 }
             }
         }
@@ -242,7 +232,6 @@ namespace Game
                 if (a[pologhenievmassive] == "3")
                 {
                     pologhenievmassive++; kolichestvoprav++; await Task.Delay(1000);
-                    //lpoint.Content = "Всего очков: " + vsegoockov.ToString();/*oc2.Content = "Очки за раунд: " + ocki;*/
                 }
                 else
                 {
@@ -251,7 +240,6 @@ namespace Game
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    //Button_Click(sender, e);
                 }
             }
         }
@@ -270,7 +258,6 @@ namespace Game
                 if (a[pologhenievmassive] == "4")
                 {
                     pologhenievmassive++; kolichestvoprav++; await Task.Delay(1000);
-                    //lpoint.Content = "Всего очков: " + vsegoockov.ToString();/*oc2.Content = "Очки за раунд: " + ocki;*/
                 }
                 else
                 {
@@ -279,7 +266,6 @@ namespace Game
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    //Button_Click(sender, e);
                 }
             }
         }
@@ -299,7 +285,6 @@ namespace Game
                 if (a[pologhenievmassive] == "5")
                 {
                     pologhenievmassive++; kolichestvoprav++; await Task.Delay(1000);
-                    //lpoint.Content = "Очки: " + vsegoockov.ToString();/* oc2.Content = "Очки за раунд: " + ocki;*/
                 }
                 else
                 {
@@ -308,7 +293,6 @@ namespace Game
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    //Button_Click(sender, e);
                 }
             }
         }
@@ -326,7 +310,6 @@ namespace Game
                 if (a[pologhenievmassive] == "6")
                 {
                     pologhenievmassive++; kolichestvoprav++; await Task.Delay(1000);
-                    //lpoint.Content = "Всего очков: " + vsegoockov.ToString();/*oc2.Content = "Очки за раунд: " + ocki; */
                 }
                 else
                 {
@@ -335,7 +318,6 @@ namespace Game
                 if (pologhenievmassive == sloshost)
                 {
                     timerTick2(sender, e);
-                    //Button_Click(sender, e);
                 }
             }
         }
@@ -345,14 +327,6 @@ namespace Game
             MediaSound();
             timer2.Stop();
             timer.Stop();
-
-            /*if (MessageBox.Show("Вы уверены в этом? Ваш прогресс будет утерян", "Stop", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
-            {
-                Window1 w2 = new Window1();
-                this.Hide();
-                w2.Show();
-                sekunda2 = 0;
-            }*/
         }
         
         private void Korobki()
@@ -394,6 +368,7 @@ namespace Game
                 cmd.Parameters.AddWithValue("@Record", ID.Record);
                 cmd.Parameters.AddWithValue("@Id", ID.id_igrok);
                 cmd.ExecuteNonQuery();
+                conn.Close();
             }
             lrecord.Content = ID.Record;
         }
@@ -416,6 +391,20 @@ namespace Game
             kolichestvoclikovnakorobki = 0;
             timer.Start();
             ltime.Content = 20-sekunda2;
+            lpoint.Content = vsegoockov.ToString();
+            pologhenievmassive = 0;
+            l7.Content = "";
+            i = 0;
+            kolichestvoprav = 0;
+            Korobki();
+        }
+        private void Prodol()
+        {
+            sekunda2 = 0;
+            kolicestvokorobok = 0;
+            kolichestvoclikovnakorobki = 0;
+            timer.Start();
+            ltime.Content = 20 - sekunda2;
             lpoint.Content = vsegoockov.ToString();
             pologhenievmassive = 0;
             l7.Content = "";

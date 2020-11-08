@@ -50,24 +50,12 @@ namespace Game
                 sdr.Read();
                 ID.id_igrok = Convert.ToInt32(sdr.GetValue(0));
                 ID.Record = Convert.ToInt32( sdr.GetValue(3));
+                conn.Close();
             Manager.Mainscreen.Navigate(new mainscreen(player));
+
             }
             else { MessageBox.Show("Неверный логин или пароль","Вход не выполнен"); }
-            /*ApplicationContext db = new ApplicationContext();
-            db.MainBDs.Load();
-            MainBD mainBD = db.MainBDs.Find(LoginLabel.Text);
-            if(mainBD!=null)
-            {
-                if (mainBD.Login == LoginLabel.Text)
-                    if (mainBD.Parol == ParolLabel.Text)
-                    {
-                        ID.id_igrok = mainBD.ID;
-                        ID.Record = mainBD.Record;
-                        Manager.Mainscreen.Navigate(new mainscreen());
-                    }
-                    else { MessageBox.Show("Неверный логин или пароль", "Вход не выполнен"); }
-            }
-            else { MessageBox.Show("Неверный логин или пароль", "Вход не выполнен"); }*/
+            conn.Close();
         }
         public void MediaSound()
         {
@@ -88,28 +76,12 @@ namespace Game
 
         private void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-           /* var player = new SoundPlayer(FilePath.Combine(directory, "click.wav"));
-            if (Option.isPlaying == false)
-            {
-                player.Play();
-            }
-            else
-            {
-                player.Stop();
-            }*/
+
         }
 
         private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
         {
-            /*var player = new SoundPlayer(FilePath.Combine(directory, "click.wav"));
-            if (Option.isPlaying == false)
-            {
-                player.Play();
-            }
-            else
-            {
-                player.Stop();
-            }*/
+
         }
     }
 }

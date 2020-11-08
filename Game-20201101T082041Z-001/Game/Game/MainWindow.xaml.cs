@@ -21,6 +21,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using FilePath = System.IO.Path;
 using System.Media;
 using System.Reflection;
+using System.IO;
 
 namespace Game
 {
@@ -54,12 +55,28 @@ namespace Game
                 player.Stop();
                 Media.music = true;
             }
+
+            player.MediaEnded += Player_MediaEnded;
         }
+
+        private void Player_MediaEnded(object sender, EventArgs e)
+        {
+            player.Stop();
+            player.Play();
+        }
+
         private void DoubleAnimation_Completed(object sender, EventArgs e)
         {
 
         }
-    
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы действительно хотите закрыть игру?", "Выход", MessageBoxButton.YesNoCancel) == MessageBoxResult.Yes)
+            {
+                this.Close(); 
+            }
+        }
     }
     public static class NameImage
     {

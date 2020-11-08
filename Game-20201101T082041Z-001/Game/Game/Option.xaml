@@ -28,9 +28,9 @@
         <Button x:Name="Back" Width="230" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="Back_Click" Margin="0,0,0,-1.4" Grid.Row="2">
             <Image Source="Images\back.gif"/>
         </Button>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25">
             <Image Source="Images\name.png" Width="300"/>
-            <TextBox TextWrapping="NoWrap" x:Name="Namelabel" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="293" FontSize="30" FontFamily="HandSound" Foreground="#FFE0A065"/>
+            <TextBox TextWrapping="NoWrap" x:Name="Namelabel" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="293" FontSize="30" FontFamily="Segoe Print"/>
             <Button Click="Button_Click" Content="Готово" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="42" FontSize="20" Background="White" BorderBrush="{x:Null}" FontFamily="HandSound" Foreground="#FFE8C8A6"/>
         </StackPanel>
     </Grid>

@@ -59,8 +59,10 @@ namespace Game
         private void exit_Click(object sender, RoutedEventArgs e)
         {
             MediaSound();
-            if (MessageBox.Show("Вы действительно хотите выйти?", "Выход", MessageBoxButton.YesNo)==MessageBoxResult.Yes)
-                Application.Current.Shutdown();
+            if (MessageBox.Show("Вы действительно хотите выйти?", "Выход", MessageBoxButton.YesNoCancel)==MessageBoxResult.Yes)
+            {
+                Manager.Mainscreen.Navigate(new Login_and_Registr(player));
+            }
         }
     }
 }

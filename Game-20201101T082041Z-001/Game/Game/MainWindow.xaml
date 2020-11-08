@@ -5,11 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Game"
         mc:Ignorable="d"
-        Title="" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized" WindowStyle="None">
 
 
     <Grid Name="MainGrid">
         <Image Source="Images\MainFon.gif" Margin="-10,-125,-50,-126"/>
         <Frame x:Name="main" Grid.ColumnSpan="2" Margin="0,0,0,0" NavigationUIVisibility="Hidden"></Frame>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="50" Height="50" Click="Button_Click" Background="{x:Null}" BorderBrush="{x:Null}">
+
+            <Image Source="/Images/загруженное (1).png"/>
+
+        </Button>
     </Grid>
 </Window>

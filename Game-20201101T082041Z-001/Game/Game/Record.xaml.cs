@@ -84,6 +84,11 @@ namespace Game
             }
             catch
             { MessageBox.Show("Произошла непредвиденная ошибка"); }
+            try
+            {
+                conn.Close();
+            }
+            catch { }
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

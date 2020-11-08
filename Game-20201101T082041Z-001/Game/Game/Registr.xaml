@@ -21,7 +21,7 @@
         <StackPanel VerticalAlignment="Center" Grid.Column="1">
             <TextBox x:Name="Login" Width="250" HorizontalAlignment="Left" Margin="20,20" Height="25"/>
             <TextBox x:Name="Name" Width="250" HorizontalAlignment="Left" Margin="20,25" Height="25"/>
-            <TextBox x:Name="Parol" Width="250" HorizontalAlignment="Left" Margin="20,25" Height="25"/>
+            <TextBox x:Name="Parol" Width="250" HorizontalAlignment="Left" Margin="20,25" Height="25" KeyDown="Parol_KeyDown"/>
         </StackPanel>
         <Button Click="Button_Click_1" Width="230" Height="60" HorizontalAlignment="Left" VerticalAlignment="Bottom" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Source="Images\Back.gif"/>

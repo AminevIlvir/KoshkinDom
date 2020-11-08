@@ -13,33 +13,39 @@
         <Button x:Name="Back" Width="230" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="Back_Click">
             <Image Source="Images\back.gif" MouseDown="Image_MouseDown"/>
         </Button>
-        <Image Source="Images\Recfon.gif" VerticalAlignment="Top" HorizontalAlignment="Center" Height="356"/>
-        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" >
-            <StackPanel Orientation="Horizontal" Width="350" Height="50">
-                <Label FontFamily="Arial" FontSize="20" Name="rec1" Content="1. " Width="300" Height="50" ></Label>
-                <Label FontFamily="Arial" FontSize="20" Name="rec11" Width="50"></Label>
+        <Image Source="Images\recoed2.png" VerticalAlignment="Top" HorizontalAlignment="Center" Height="356"/>
+        
+        <Grid  HorizontalAlignment="Center" Margin="0,0,0,50" VerticalAlignment="Bottom">
+            <Rectangle Fill="#FFF2C4" RadiusX="25" RadiusY="25" Opacity="0.4"></Rectangle>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Width="500" Height="50"/>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50">
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec1" Content="1. " Width="300" Height="50"></Label>
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec11" Width="100"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50">
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec2"  Width="300" Height="50" ></Label>
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec21" Width="50"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50">
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" ></Label>
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec31" Width="50"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50">
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" ></Label>
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec41" Width="50"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50">
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" ></Label>
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="rec51" Width="50"></Label>
+                </StackPanel>
+                <StackPanel Height="100"/>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50">
+                    <Label FontFamily="Segoe Print" FontSize="30" x:Name="schet" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" />
+                    <Label FontFamily="Segoe Print" FontSize="30" Name="schet1" Width="50"></Label>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Width="350" Height="50"/>
             </StackPanel>
-            <StackPanel Orientation="Horizontal" Width="350" Height="50">
-                <Label FontFamily="Arial" FontSize="20" Name="rec2"  Width="300" Height="50" ></Label>
-                <Label FontFamily="Arial" FontSize="20" Name="rec21" Width="50"></Label>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Width="350" Height="50">
-                <Label FontFamily="Arial" FontSize="20" Name="rec3" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" ></Label>
-                <Label FontFamily="Arial" FontSize="20" Name="rec31" Width="50"></Label>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Width="350" Height="50">
-                <Label FontFamily="Arial" FontSize="20" Name="rec4" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" ></Label>
-                <Label FontFamily="Arial" FontSize="20" Name="rec41" Width="50"></Label>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Width="350" Height="50">
-                <Label FontFamily="Arial" FontSize="20" Name="rec5" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" ></Label>
-                <Label FontFamily="Arial" FontSize="20" Name="rec51" Width="50"></Label>
-            </StackPanel>
-            <StackPanel Height="100"/>
-            <StackPanel Orientation="Horizontal" Width="350" Height="50">
-                <Label FontFamily="Arial" FontSize="20" x:Name="schet" VerticalAlignment="Center" HorizontalAlignment="Center" Width="300" Height="50" />
-                <Label FontFamily="Arial" FontSize="20" Name="schet1" Width="50"></Label>
-            </StackPanel>
-        </StackPanel>
+        </Grid>
     </Grid>
 </Page>

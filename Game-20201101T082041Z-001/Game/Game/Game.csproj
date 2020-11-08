@@ -189,12 +189,8 @@
     <Resource Include="Images\nast.gif" />
     <Resource Include="Images\newgame1.gif" />
     <Resource Include="Images\record.gif" />
-    <Resource Include="Images\record1.gif" />
     <Resource Include="Images\shet.gif" />
     <Resource Include="Images\start.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\Recfon.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MainFon.gif" />
@@ -248,6 +244,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="click.wav" />
+    <Resource Include="Images\загруженное %281%29.png" />
+    <Resource Include="Images\rec.png" />
+    <Content Include="music.wav" />
+    <Resource Include="Images\close-window.png" />
+    <Resource Include="Images\recoed2.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

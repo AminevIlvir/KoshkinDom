@@ -36,11 +36,13 @@ namespace Game
             cmd.CommandText = Convert.ToString("Select name from Main where id=@Id");;
             cmd.Parameters.AddWithValue("@Id", ID.id_igrok);
             SQLiteDataReader sdr = cmd.ExecuteReader();
+
             if (sdr.HasRows)
             {
                 sdr.Read();
                 Namelabel.Text = sdr.GetValue(0).ToString();
             }
+            conn.Close();
             if (Media.music == false)
             {
                 mus.Source = new BitmapImage(new Uri(@"Images\musicвыбран.png", UriKind.Relative));
@@ -146,7 +148,7 @@ namespace Game
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            if (Namelabel.Text!=null) 
+            if (Namelabel.Text.Length!=0) 
             {
                 SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\BDCatHome; version=3;");
                 conn.Open();
@@ -167,16 +169,16 @@ namespace Game
         private void zvu_MouseDown(object sender, MouseButtonEventArgs e)
         {
             var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var player = new SoundPlayer(FilePath.Combine(directory,"click.wav"));
+            var player1 = new SoundPlayer(FilePath.Combine(directory,"click.wav"));
             if (Media.sound == true)
             {
-                player.Play();
+                player1.Play();
                 Media.sound = false;
                 zvu.Source = new BitmapImage(new Uri(@"Images\zvukвыбрано.png", UriKind.Relative));
             }
             else
             {
-                player.Stop();
+               player1.Stop();
                 Media.sound = true;
                 zvu.Source = new BitmapImage(new Uri(@"Images\zvuk.png", UriKind.Relative));
             }

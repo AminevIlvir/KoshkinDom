@@ -17,5 +17,9 @@
                 <Image Source="Images\Registr.png"/>
             </Button>
         </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Left" Orientation="Vertical" Margin="25">
+            <Image x:Name="mus" Source="IMages\music.png" MouseDown="mus_MouseDown" Width="150"/>
+            <Image x:Name="zvu" Source="Images\zvuk.png" Grid.Row="1" MouseDown="zvu_MouseDown" Width="150"/>
+        </StackPanel>
     </Grid>
 </Page>

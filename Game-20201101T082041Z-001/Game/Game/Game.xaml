@@ -11,24 +11,35 @@
       Title="Gam">
 
     <Grid x:Name="Gr">
-        <StackPanel HorizontalAlignment="Right">
+        <StackPanel HorizontalAlignment="Right" Margin="0,0,20,0">
             <TextBlock x:Name="time" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}">
                 <Image Source="Images\time.gif"/>
             </TextBlock>
-            <Label Height="50" Name="ltime" HorizontalAlignment="Center" FontFamily="Arial" FontSize="20"/>
+            
+            <Grid>
+                <Rectangle Fill="#FFF2C4" RadiusX="25" RadiusY="25" Opacity="0.4"></Rectangle>
+                <Label FontFamily="Segoe Print" FontSize="30" Height="50" Name="ltime" HorizontalAlignment="Center"/>
+            </Grid>
+            
             <TextBlock x:Name="shet" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}">
                 <Image Source="Images\shet.gif"/>
             </TextBlock>
-            <Label Height="50" Name="lpoint" HorizontalAlignment="Center" FontFamily="Arial" FontSize="20"/>
+            <Grid>
+                <Rectangle Fill="#FFF2C4" RadiusX="25" RadiusY="25" Opacity="0.4"></Rectangle>
+                <Label Height="50" Name="lpoint" HorizontalAlignment="Center" FontFamily="Segoe Print" FontSize="30"/>
+            </Grid>
             <TextBlock x:Name="record" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}">
-                <Image Source="Images\record.gif"/>
+                <Image Source="Images\rec.png"/>
             </TextBlock>
-            <Label Name="lrecord" Height="50" HorizontalAlignment="Center" FontFamily="Arial" FontSize="20"/>
+            <Grid>
+                <Rectangle Fill="#FFF2C4" RadiusX="25" RadiusY="25" Opacity="0.4"></Rectangle>
+                <Label Name="lrecord" Height="50" HorizontalAlignment="Center" FontFamily="Segoe Print" FontSize="30"/>
+            </Grid>
         </StackPanel>
-        <Button Click="Button_Click" x:Name="Start" Width="230" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}">
+        <Button Click="Button_Click" x:Name="Start" Width="300" Height="90" VerticalAlignment="Bottom" HorizontalAlignment="Right" Background="{x:Null}" BorderBrush="{x:Null}">
             <Image Source="Images\start.gif"/>
         </Button>
-        <Grid Margin="20,20,250,100">
+        <Grid Margin="20,20,275,100">
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
@@ -38,7 +49,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Rectangle Fill="White" Opacity="0.3" Grid.ColumnSpan="3" Grid.RowSpan="2"></Rectangle>
+            <Rectangle Fill="#FFF2C4" RadiusX="25" RadiusY="25" Opacity="0.4" Grid.ColumnSpan="3" Grid.RowSpan="2"></Rectangle>
             <Image x:Name="Image" MouseDown="Image_MouseDown" Grid.Row="0" Grid.Column="0" Opacity="1"></Image>
             <Image x:Name="Image1" MouseDown="Image1_MouseDown" Grid.Row="0" Grid.Column="1"></Image>
             <Image x:Name="Image2" MouseDown="Image2_MouseDown" Grid.Row="0" Grid.Column="2"></Image>
