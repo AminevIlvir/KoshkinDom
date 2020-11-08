@@ -169,12 +169,13 @@ namespace Game
         int kolichestvoclikovnakorobki, kolicestvokorobok, pologhenievmassive;
         async void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MediaSound();
-            Korobki();
-            string s = l7.Content.ToString();
-            string[] a = s.Split(' ');
             if (dostup == true)
             {
+                MediaSound();
+                Korobki();
+                string s = l7.Content.ToString();
+                string[] a = s.Split(' ');
+
                 var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 Image.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("1" + imag + ".png"))));
                 
@@ -195,12 +196,13 @@ namespace Game
         }
         async void Image1_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MediaSound();
-            Korobki();
-            string s = l7.Content.ToString();
-            string[] a = s.Split(' ');
             if (dostup == true)
             {
+                MediaSound();
+                Korobki();
+                string s = l7.Content.ToString();
+                string[] a = s.Split(' ');
+            
                 var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 Image1.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("2" + imag + ".png"))));
                 kolichestvoclikovnakorobki++;
@@ -220,12 +222,13 @@ namespace Game
         }
         async void Image2_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MediaSound();
-            Korobki();
-            string s = l7.Content.ToString();
-            string[] a = s.Split(' ');
             if (dostup == true)
             {
+                MediaSound();
+                Korobki();
+                string s = l7.Content.ToString();
+                string[] a = s.Split(' ');
+            
                 var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 Image2.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("3" + imag + ".png"))));
                 kolichestvoclikovnakorobki++;
@@ -245,12 +248,13 @@ namespace Game
         }
         async void Image3_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MediaSound();
-            Korobki();
-            string s = l7.Content.ToString();
-            string[] a = s.Split(' ');
             if (dostup == true)
             {
+                MediaSound();
+                Korobki();
+                string s = l7.Content.ToString();
+                string[] a = s.Split(' ');
+            
                 var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 Image3.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("4" + imag + ".png"))));
 
@@ -271,12 +275,13 @@ namespace Game
         }
         async void Image4_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MediaSound();
-            Korobki();
-            string s = l7.Content.ToString();
-            string[] a = s.Split(' ');
             if (dostup == true)
             {
+                MediaSound();
+                Korobki();
+                string s = l7.Content.ToString();
+                string[] a = s.Split(' ');
+            
                 var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 Image4.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("5" + imag + ".png"))));
 
@@ -298,12 +303,13 @@ namespace Game
         }
         async void Image5_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            MediaSound();
-            Korobki();
-            string s = l7.Content.ToString();
-            string[] a = s.Split(' ');
             if (dostup == true)
             {
+                MediaSound();
+                Korobki();
+                string s = l7.Content.ToString();
+                string[] a = s.Split(' ');
+            
                 var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
                 Image5.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("6" + imag + ".png"))));
                 kolichestvoclikovnakorobki++;
@@ -386,6 +392,7 @@ namespace Game
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MediaSound();
+            Error();
             sekunda2 = 0;
             kolicestvokorobok = 0;
             kolichestvoclikovnakorobki = 0;

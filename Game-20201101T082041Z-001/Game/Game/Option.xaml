@@ -9,10 +9,10 @@
       Title="Option">
 
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="400" Orientation="Horizontal" Width="1000">
-            <Image x:Name="odin" Width="300" Height="400" Margin="20,0" MouseDown="Image_MouseDown" Source="Images\выбор1.png"  ></Image>
-            <Image x:Name="dwa" Width="300" Margin="20,0" MouseDown="Image_MouseDown_1" Source="Images\выбор2.png" ></Image>
-            <Image x:Name="tri" Width="300" Margin="20,0" MouseDown="Image_MouseDown_2" Source="Images\выбор3.png" ></Image>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Height="400" Orientation="Horizontal">
+            <Image x:Name="odin" Width="250" Margin="20,0" MouseDown="Image_MouseDown" Source="Images\выбор1.png"  ></Image>
+            <Image x:Name="dwa" Width="250" Margin="20,0" MouseDown="Image_MouseDown_1" Source="Images\выбор2.png" ></Image>
+            <Image x:Name="tri" Width="250" Margin="20,0" MouseDown="Image_MouseDown_2" Source="Images\выбор3.png" ></Image>
         </StackPanel>
         <Grid VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="195" Margin="353,0,352,-1.4" Width="95">
             <Grid.ColumnDefinitions>
@@ -30,7 +30,7 @@
         </Button>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="25">
             <Image Source="Images\name.png" Width="300"/>
-            <TextBox TextWrapping="NoWrap" x:Name="Namelabel" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="293" FontSize="30" FontFamily="Segoe Print"/>
+            <TextBox TextWrapping="NoWrap" x:Name="Namelabel" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="293" FontSize="30" FontFamily="Segoe Print" MaxLength="12" PreviewKeyDown="Namelabel_PreviewKeyDown"/>
             <Button Click="Button_Click" Content="Готово" HorizontalAlignment="Left" VerticalAlignment="Top" Width="115" Height="42" FontSize="20" Background="White" BorderBrush="{x:Null}" FontFamily="HandSound" Foreground="#FFE8C8A6"/>
         </StackPanel>
     </Grid>

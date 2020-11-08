@@ -189,14 +189,18 @@
     <Resource Include="Images\nast.gif" />
     <Resource Include="Images\newgame1.gif" />
     <Resource Include="Images\record.gif" />
-    <Resource Include="Images\shet.gif" />
     <Resource Include="Images\start.gif" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\MainFon.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\time.gif" />
+    <Resource Include="Images\выбор1.png" />
+    <Resource Include="Images\выбор1выбран.png" />
+    <Resource Include="Images\выбор2.png" />
+    <Resource Include="Images\выбор2выбран.png" />
+    <Resource Include="Images\выбор3.png" />
+    <Resource Include="Images\выбор3выбран.png" />
     <Resource Include="Images\Настройки копия.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -223,12 +227,6 @@
     <Resource Include="Images\name.png" />
     <Resource Include="Images\zvuk.png" />
     <Resource Include="Images\zvukвыбрано.png" />
-    <Resource Include="Images\выбор1.png" />
-    <Resource Include="Images\выбор1выбран.png" />
-    <Resource Include="Images\выбор2.png" />
-    <Resource Include="Images\выбор2выбран.png" />
-    <Resource Include="Images\выбор3.png" />
-    <Resource Include="Images\выбор3выбран.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -246,6 +244,10 @@
     <Content Include="click.wav" />
     <Resource Include="Images\загруженное %281%29.png" />
     <Resource Include="Images\rec.png" />
+    <Resource Include="Images\rec1.gif" />
+    <Resource Include="Images\shet.png" />
+    <Resource Include="Images\time.png" />
+    <Resource Include="Images\icon.png" />
     <Content Include="music.wav" />
     <Resource Include="Images\close-window.png" />
     <Resource Include="Images\recoed2.png" />

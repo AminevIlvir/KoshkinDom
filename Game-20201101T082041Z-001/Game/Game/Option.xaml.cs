@@ -147,18 +147,40 @@ namespace Game
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (Namelabel.Text.Length!=0) 
+
+            if (Namelabel.Text.Length != 0)
             {
                 SQLiteConnection conn = new SQLiteConnection(@"Data Source=.\BDCatHome; version=3;");
-                conn.Open();
-                SQLiteCommand cmd = conn.CreateCommand();
-                string sql_command = "Update Main SET name=@name where id=@Id";
-                cmd.CommandText = sql_command;
-                cmd.Parameters.AddWithValue("@name", Namelabel.Text);
-                cmd.Parameters.AddWithValue("@Id", ID.id_igrok);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Имя пользователя изменено");
+                SQLiteCommand sqlCommand = conn.CreateCommand();
+
+                string proverka = Convert.ToString("Select name from Main where name IN ('" + Namelabel.Text + "')");
+                sqlCommand.CommandText = proverka;
+                try
+                {
+                    conn.Open();
+                    SQLiteDataReader sdr = sqlCommand.ExecuteReader();
+                    if (!sdr.HasRows)
+                    {
+                        conn.Close();
+                        conn.Open();
+                        SQLiteCommand cmd = conn.CreateCommand();
+                        string sql_command = "Update Main SET name=@name where id=@Id";
+                        cmd.CommandText = sql_command;
+                        cmd.Parameters.AddWithValue("@name", Namelabel.Text);
+                        cmd.Parameters.AddWithValue("@Id", ID.id_igrok);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Имя пользователя изменено");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Имя пользователя занято");
+                    }
+                }
+                catch 
+                {
+
+                }
+                
             }
             else
             {
@@ -181,6 +203,14 @@ namespace Game
                player1.Stop();
                 Media.sound = true;
                 zvu.Source = new BitmapImage(new Uri(@"Images\zvuk.png", UriKind.Relative));
+            }
+        }
+
+        private void Namelabel_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
             }
         }
     }

@@ -80,32 +80,47 @@ namespace Game
                 if (!sdr.HasRows)
                 {
                     conn.Close();
-
-                    if (Parol.Text.Length != 0 & Name.Text.Length != 0)
+                    StringBuilder errors = new StringBuilder();
+                    if (Login.Text.Length == 0)
                     {
-                        string cmd1 = "Insert Into Main (login,name,parol,record) values (@Login,@Name,@Parol,@Record)";
-
-                        SQLiteCommand command = conn.CreateCommand();
-                        command.CommandText = cmd1;
-                        command.Parameters.AddWithValue("@Login", Login.Text);
-                        command.Parameters.AddWithValue("@Name", Name.Text);
-                        command.Parameters.AddWithValue("@Parol", Parol.Text);
-                        command.Parameters.AddWithValue("@Record", 0);
-                        try
-                        {
-                            conn.Open();
-                            command.ExecuteNonQuery();
-                            conn.Close();
-                            MessageBox.Show("Вы зарегистрировались");
-                            Manager.Mainscreen.GoBack();
-                        }
-                        catch (Exception ex)
-                        {
-                            //If something went wrong
-                            MessageBox.Show("Ошибка" + ex);
-                        }
+                        errors.AppendLine("Укажите логин");
                     }
-                    else MessageBox.Show("Введите все поля");
+                    if(Name.Text.Length == 0)
+                    {
+                        errors.AppendLine("Укажите имя пользователя");
+                    }
+                    if (Parol.Text.Length == 0)
+                    {
+                        errors.AppendLine("Укажите пароль");
+                    }
+
+                    if (errors.Length > 0)
+                    {
+                        MessageBox.Show(errors.ToString());
+                        return;
+                    }
+
+                    string cmd1 = "Insert Into Main (login,name,parol,record) values (@Login,@Name,@Parol,@Record)";
+
+                    SQLiteCommand command = conn.CreateCommand();
+                    command.CommandText = cmd1;
+                    command.Parameters.AddWithValue("@Login", Login.Text);
+                    command.Parameters.AddWithValue("@Name", Name.Text);
+                    command.Parameters.AddWithValue("@Parol", Parol.Text);
+                    command.Parameters.AddWithValue("@Record", 0);
+                    try
+                    {
+                        conn.Open();
+                        command.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Вы зарегистрировались");
+                        Manager.Mainscreen.GoBack();
+                    }
+                    catch (Exception ex)
+                    {
+                        //If something went wrong
+                        MessageBox.Show("Ошибка" + ex);
+                    }
                 }
                 else { MessageBox.Show("Логин занят"); }
             }
@@ -143,6 +158,35 @@ namespace Game
             if (e.Key == Key.Space)
             {
                 e.Handled = false;
+            }
+        }
+
+        private void Login_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            
+        }
+
+        private void Login_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Name_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Parol_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Space)
+            {
+                e.Handled = true;
             }
         }
     }

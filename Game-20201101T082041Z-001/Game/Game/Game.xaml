@@ -13,7 +13,7 @@
     <Grid x:Name="Gr">
         <StackPanel HorizontalAlignment="Right" Margin="0,0,20,0">
             <TextBlock x:Name="time" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}">
-                <Image Source="Images\time.gif"/>
+                <Image Source="Images\time.png"/>
             </TextBlock>
             
             <Grid>
@@ -22,7 +22,7 @@
             </Grid>
             
             <TextBlock x:Name="shet" Width="230" Height="60" HorizontalAlignment="Center" Background="{x:Null}">
-                <Image Source="Images\shet.gif"/>
+                <Image Source="Images\shet.png"/>
             </TextBlock>
             <Grid>
                 <Rectangle Fill="#FFF2C4" RadiusX="25" RadiusY="25" Opacity="0.4"></Rectangle>
