@@ -170,15 +170,17 @@ namespace Game
                         cmd.Parameters.AddWithValue("@Id", ID.id_igrok);
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Имя пользователя изменено");
+                        conn.Close();
                     }
                     else
                     {
                         MessageBox.Show("Имя пользователя занято");
+                        conn.Close();
                     }
                 }
                 catch 
                 {
-
+                    
                 }
                 
             }

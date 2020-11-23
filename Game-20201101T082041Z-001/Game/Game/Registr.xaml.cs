@@ -79,7 +79,29 @@ namespace Game
                 SQLiteDataReader sdr = sqlCommand.ExecuteReader();
                 if (!sdr.HasRows)
                 {
-                    conn.Close();
+                    //conn.Close();
+                    if (Name.Text.Length != 0)
+                    {
+                        SQLiteCommand sQLiteCommand = conn.CreateCommand();
+                        proverka = Convert.ToString("Select name from Main where name IN ('" + Name.Text + "')");
+                        sQLiteCommand.CommandText = proverka;
+                        //conn.Open();
+                        try
+                        {
+                            SQLiteDataReader sdr1 = sQLiteCommand.ExecuteReader();
+                            if (sdr1.HasRows)
+                            {
+                                conn.Close();
+                                MessageBox.Show("Имя пользователя занято");
+                                return;
+                            }
+                            else
+                            {
+                                //conn.Close();
+                            }
+                        }
+                        catch { }
+                    }
                     StringBuilder errors = new StringBuilder();
                     if (Login.Text.Length == 0)
                     {
@@ -110,7 +132,7 @@ namespace Game
                     command.Parameters.AddWithValue("@Record", 0);
                     try
                     {
-                        conn.Open();
+                        //conn.Open();
                         command.ExecuteNonQuery();
                         conn.Close();
                         MessageBox.Show("Вы зарегистрировались");
@@ -118,14 +140,20 @@ namespace Game
                     }
                     catch (Exception ex)
                     {
-                        //If something went wrong
+                        conn.Close();
                         MessageBox.Show("Ошибка" + ex);
                     }
                 }
-                else { MessageBox.Show("Логин занят"); }
+                else 
+                {
+                    conn.Close();
+                    MessageBox.Show("Логин занят"); 
+                }
             }
             catch(Exception ex) 
-            { MessageBox.Show("Ошибка" + ex); }
+            { 
+                MessageBox.Show("Ошибка" + ex); 
+            }
             try
             {
                 conn.Close();

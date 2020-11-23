@@ -59,10 +59,10 @@
             <Image x:Name="MessageImage" Grid.RowSpan="2" Grid.ColumnSpan="3" Width="500" Height="100"></Image>
         </Grid>
         <Button x:Name="Back" Width="230" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Left" Background="{x:Null}" BorderBrush="{x:Null}" Click="Back_Click">
-            <Image Source="images\back.gif" MouseDown="Image_MouseDown_1"/>
+            <Image Source="images\back.gif"/>
         </Button>
         <Image Margin="393,0,407,0" HorizontalAlignment="Center" Height="60" VerticalAlignment="Bottom"/>
         <Label Name="l7" Width="0" Height="0"></Label>
-        <Image x:Name="IgrovMessageImage" Width="400" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseDown="IgrovMessageImage_MouseDown"/>
+        <Image x:Name="IgrovMessageImage" Width="400" Height="60" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

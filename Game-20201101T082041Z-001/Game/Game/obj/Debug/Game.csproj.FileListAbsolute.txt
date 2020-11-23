@@ -136,3 +136,42 @@ C:\Github\Game-20201101T082041Z-001\Game\Game\obj\Debug\Game.csproj.CoreCompileI
 C:\Github\Game-20201101T082041Z-001\Game\Game\obj\Debug\Game.csproj.CopyComplete
 C:\Github\Game-20201101T082041Z-001\Game\Game\obj\Debug\Game.exe
 C:\Github\Game-20201101T082041Z-001\Game\Game\obj\Debug\Game.pdb
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\Game.exe.config
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\Game.exe
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\Game.pdb
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\EntityFramework.dll
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\EntityFramework.SqlServer.dll
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\System.Data.SQLite.dll
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\EntityFramework.xml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\EntityFramework.SqlServer.xml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\bin\Debug\System.Data.SQLite.xml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Login.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Login_and_Registr.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\mainscreen.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\MainWindow.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Option.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Record.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Registr.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\App.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game_Content.g.cs
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game_MarkupCompile.cache
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game_MarkupCompile.lref
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Login.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Login_and_Registr.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\mainscreen.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\MainWindow.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Option.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Record.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Registr.baml
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.g.resources
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.Properties.Resources.resources
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.csproj.GenerateResource.cache
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.csproj.CopyComplete
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.exe
+C:\Github\Game-20201101T082041Z-001 — копия\Game\Game\obj\Debug\Game.pdb

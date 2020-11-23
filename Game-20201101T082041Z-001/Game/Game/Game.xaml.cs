@@ -19,7 +19,6 @@ using System.IO;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Media;
-using System.Reflection;
 using System.Data.SQLite;
 
 namespace Game
@@ -48,6 +47,7 @@ namespace Game
             lrecord.Content = ID.Record;
             
         }
+
         int sekunda2;
         int sloshost = 3;
         int kolichestvoprav;
@@ -57,6 +57,7 @@ namespace Game
         {
             Korobki();
         }
+
         private void timerTick2(object sender, EventArgs e)
         {
             ltime.Content = 20 - sekunda2;
@@ -92,10 +93,7 @@ namespace Game
                 kolicestvokorobok = 0;
                 kolichestvoclikovnakorobki = 0;
                 kolichestvoprav = 0;
-                //RoutedEventArgs e1 = new RoutedEventArgs();
                 Prodol();
-
-                Korobki();
             }
         }
         int i;
@@ -134,15 +132,17 @@ namespace Game
             }
             if (kolicestvokorobok == sloshost)
             {
+                timer.Stop();
                 await Task.Delay(1000);
                 dostup = true;
                 IgrovMessageImage.Source=new BitmapImage(new Uri(@"Images\Vashhod.png",UriKind.Relative));
                 Korobki();
-                timer.Stop();
+
                 timer2.Start();
             }
             i++;
         }
+
         public void Error()
         {
             ltime.Content = 0;
@@ -165,7 +165,9 @@ namespace Game
             var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             MessageImage.Source = new BitmapImage(new Uri(FilePath.Combine(directory, Convert.ToString("Theend.png"))));
         }
+
         bool dostup;
+
         int kolichestvoclikovnakorobki, kolicestvokorobok, pologhenievmassive;
         async void Image_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -353,10 +355,10 @@ namespace Game
             Image5.Source = new BitmapImage(new Uri(FilePath.Combine(directory, "0.png")));
         }
         
-
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             MediaSound();
+            Error();
             Manager.Mainscreen.GoBack();
         }
 
@@ -379,16 +381,6 @@ namespace Game
             lrecord.Content = ID.Record;
         }
 
-        private void IgrovMessageImage_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
-        private void Image_MouseDown_1(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MediaSound();
@@ -405,6 +397,7 @@ namespace Game
             kolichestvoprav = 0;
             Korobki();
         }
+
         private void Prodol()
         {
             sekunda2 = 0;
@@ -419,6 +412,7 @@ namespace Game
             kolichestvoprav = 0;
             Korobki();
         }
+
         public void MediaSound()
         {
             var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -428,5 +422,6 @@ namespace Game
                 player.Play();
             }
         }
+
     }
 }

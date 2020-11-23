@@ -51,12 +51,13 @@ namespace Game
                 ID.id_igrok = Convert.ToInt32(sdr.GetValue(0));
                 ID.Record = Convert.ToInt32( sdr.GetValue(3));
                 conn.Close();
-            Manager.Mainscreen.Navigate(new mainscreen(player));
+                Manager.Mainscreen.Navigate(new mainscreen(player));
 
             }
             else { MessageBox.Show("Неверный логин или пароль","Вход не выполнен"); }
             conn.Close();
         }
+
         public void MediaSound()
         {
             var directory = FilePath.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
